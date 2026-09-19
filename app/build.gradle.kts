@@ -1,8 +1,12 @@
-plugins { id("com.android.application"); id("org.jetbrains.kotlin.android") }
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
 
 android {
     namespace = "id.cardmate.app"
     compileSdk = 35
+
     defaultConfig {
         applicationId = "id.cardmate.app"
         minSdk = 26
@@ -10,7 +14,22 @@ android {
         versionCode = 1
         versionName = "1.0.0"
     }
-    buildTypes { release { isMinifyEnabled = false; signingConfig = signingConfigs.getByName("debug") } }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+}
+
+kotlin {
+    jvmToolchain(17)
 }
 
 dependencies {
