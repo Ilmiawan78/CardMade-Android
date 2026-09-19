@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.CardMate" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#155EEF</item><item name="colorPrimaryVariant">#103FAE</item>
+        <item name="colorSecondary">#12B76A</item><item name="android:fontFamily">sans</item>
+        <item name="android:navigationBarColor">#FFFFFF</item><item name="android:statusBarColor">#155EEF</item>
+    </style>
+</resources>
